@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deal or No Deal – Hochzeitsgeschenk Nathalie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-area">
+
+      <!-- Left gift panel (lower-value gifts) -->
+      <div class="gifts-panel" id="left-panel"></div>
+
+      <!-- Centre panel -->
+      <div class="center-panel">
+        <h1 class="game-title">Deal or No Deal</h1>
+        <h2 class="game-subtitle">Hochzeitsgeschenk Nathalie</h2>
+
+        <div class="offer-box">
+          <div class="offer-status" id="offer-status">Noch kein Angebot</div>
+          <div class="offer-title" id="offer-title"></div>
+        </div>
+
+        <button class="reveal-button" id="reveal-btn">Angebot aufdecken</button>
+      </div>
+
+      <!-- Right gift panel (higher-value gifts) -->
+      <div class="gifts-panel" id="right-panel"></div>
+
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline-wrapper">
+    <div class="timeline-label">Geöffnete Geschenke</div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
