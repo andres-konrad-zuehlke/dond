@@ -145,7 +145,7 @@ body {
 }
 
 .game-subtitle {
-  font-family: 'Roboto', 'Arial Black', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #f0d060;
@@ -213,7 +213,7 @@ body {
   border: 2px solid #ff3300;
   border-radius: 40px;
   color: #fff;
-  font-family: 'Anton', 'Arial Black', sans-serif;
+  font-family: 'Anton', 'Arial Black', Arial, sans-serif;
   font-size: 1rem;
   font-weight: 900;
   padding: 14px 20px;

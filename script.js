@@ -42,6 +42,10 @@ const openedSet  = new Set(); // ids of opened gifts
 let currentOffer = null;      // the gift object currently shown as offer
 let offerIsNew   = false;     // true while status is "Neues Angebot" and no gift has been opened yet
 
+// Index boundary: gifts[0 .. LEFT_PANEL_COUNT-1] → left panel,
+// gifts[LEFT_PANEL_COUNT .. end] → right panel.  Floor(23/2) = 11.
+const LEFT_PANEL_COUNT = Math.floor(gifts.length / 2);
+
 // ── Initialise ───────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   renderGiftButtons();
@@ -55,7 +59,7 @@ function renderGiftButtons() {
 
   gifts.forEach((gift, index) => {
     const btn = createGiftButton(gift);
-    (index <= 10 ? leftPanel : rightPanel).appendChild(btn);
+    (index < LEFT_PANEL_COUNT ? leftPanel : rightPanel).appendChild(btn);
   });
 }
 
