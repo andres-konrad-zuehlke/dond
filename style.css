@@ -1,0 +1,353 @@
+/* ===================================================
+   Deal or No Deal – Hochzeitsgeschenk Nathalie
+   style.css  |  Desktop-first, responsive
+   =================================================== */
+
+/* ---------- Reset & base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Anton', 'Arial Black', Arial, sans-serif;
+  /* Deep-space TV-show gradient */
+  background:
+    radial-gradient(ellipse at 50% 0%, #2b1060 0%, transparent 60%),
+    radial-gradient(ellipse at 0% 100%, #0a0030 0%, transparent 60%),
+    linear-gradient(175deg, #0d0d2e 0%, #060614 50%, #000000 100%);
+  min-height: 100vh;
+  color: #ffd700;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Page wrapper ---------- */
+.game-wrapper {
+  flex: 1;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 18px 16px 8px;
+}
+
+/* ---------- Three-column flex ---------- */
+.game-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* ---------- Gift panels ---------- */
+.gifts-panel {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-content: start;
+}
+
+/* ---------- Gift button ---------- */
+.gift-button {
+  background: linear-gradient(155deg,
+    #f5c830 0%, #ffd700 30%, #e8aa14 65%, #b87800 100%);
+  border: 2px solid #7a5200;
+  border-radius: 7px;
+  padding: 9px 6px;
+  min-height: 68px;
+  width: 100%;
+  cursor: pointer;
+  color: #1a0800;
+  font-family: 'Anton', 'Arial Black', Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.35;
+  word-break: break-word;
+  hyphens: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.gift-button .btn-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.gift-button:hover:not(:disabled) {
+  filter: brightness(1.15);
+  box-shadow:
+    0 0 18px rgba(255, 215, 0, 0.65),
+    0 4px 10px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.gift-button:active:not(:disabled) {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Opened state */
+.gift-button.opened {
+  background: linear-gradient(155deg, #282828 0%, #303030 40%, #242424 100%);
+  border-color: #3a3a3a;
+  color: #555;
+  cursor: not-allowed;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+  transform: none;
+  opacity: 0.65;
+  animation: giftOpen 0.45s ease;
+}
+
+.gift-button.opened .btn-icon {
+  opacity: 0.25;
+}
+
+@keyframes giftOpen {
+  0%   { transform: scale(1.08); filter: brightness(1.4); }
+  40%  { transform: scale(0.95); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+/* ---------- Centre panel ---------- */
+.center-panel {
+  flex: 0 0 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 0;
+}
+
+.game-title {
+  font-size: 2.2rem;
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffd700;
+  text-shadow:
+    0 0 30px rgba(255, 215, 0, 0.7),
+    0 0 60px rgba(255, 215, 0, 0.3),
+    2px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+.game-subtitle {
+  font-family: 'Roboto', 'Arial Black', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f0d060;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+  margin-top: -10px;
+}
+
+/* Offer display box */
+.offer-box {
+  width: 100%;
+  background: linear-gradient(160deg, rgba(12, 6, 35, 0.96), rgba(22, 10, 50, 0.96));
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  padding: 20px 14px;
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  box-shadow:
+    0 0 28px rgba(255, 215, 0, 0.18),
+    inset 0 0 18px rgba(0, 0, 0, 0.5);
+}
+
+.offer-status {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #888;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.offer-status.status-new {
+  color: #22dd77;
+  text-shadow: 0 0 10px rgba(34, 221, 119, 0.65);
+}
+
+.offer-status.status-last {
+  color: #ff7700;
+  text-shadow: 0 0 10px rgba(255, 119, 0, 0.65);
+}
+
+.offer-title {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  text-shadow: 0 0 14px rgba(255, 215, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+/* Reveal button */
+.reveal-button {
+  width: 100%;
+  background: linear-gradient(155deg,
+    #900000 0%, #cc0000 35%, #ff1111 50%, #cc0000 65%, #900000 100%);
+  border: 2px solid #ff3300;
+  border-radius: 40px;
+  color: #fff;
+  font-family: 'Anton', 'Arial Black', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 14px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 0.2s ease;
+  box-shadow:
+    0 0 22px rgba(220, 0, 0, 0.45),
+    0 4px 12px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.reveal-button:hover {
+  filter: brightness(1.18);
+  box-shadow:
+    0 0 38px rgba(255, 20, 0, 0.75),
+    0 4px 12px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.reveal-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 18px rgba(200, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Timeline ---------- */
+.timeline-wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 16px 20px;
+}
+
+.timeline-label {
+  text-align: center;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 0.65rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 8px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.timeline-step {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: 2px solid #303030;
+  background: rgba(0, 0, 0, 0.35);
+  color: #444;
+  transition: background 0.35s ease, border-color 0.35s ease,
+              color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.timeline-step.active {
+  background: linear-gradient(135deg, #c89010, #ffd700);
+  border-color: #7a5200;
+  color: #1a0800;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  animation: stepPop 0.35s ease;
+}
+
+@keyframes stepPop {
+  0%   { transform: scale(0.75); }
+  65%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* ---------- Responsive breakpoints ---------- */
+
+/* Narrow desktop / large tablet */
+@media (max-width: 1200px) {
+  .center-panel     { flex: 0 0 250px; }
+  .game-title       { font-size: 1.9rem; }
+  .gift-button      { font-size: 0.63rem; min-height: 62px; }
+}
+
+/* Tablet – stack panels vertically */
+@media (max-width: 900px) {
+  .game-area {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .center-panel {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 420px;
+    order: -1; /* title + offer at the top on tablets */
+  }
+
+  .gifts-panel {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gift-button { min-height: 58px; font-size: 0.62rem; }
+  .game-title  { font-size: 1.7rem; }
+}
+
+/* Large mobile */
+@media (max-width: 600px) {
+  .gifts-panel {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gift-button {
+    font-size: 0.55rem;
+    min-height: 50px;
+    padding: 6px 4px;
+  }
+  .game-title     { font-size: 1.4rem; }
+  .reveal-button  { font-size: 0.88rem; letter-spacing: 2px; }
+  .timeline-step  { width: 28px; height: 28px; font-size: 0.68rem; }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+  .gifts-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
