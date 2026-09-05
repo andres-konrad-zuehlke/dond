@@ -39,26 +39,26 @@ and to determine the left/right ordering of the buttons.
 
 | # | Title | Value (CHF) |
 |---|-------|-------------|
-| 1  | Postkarte mit persönlichem Glückwunsch          | 10   |
-| 2  | Schokoladenbox Lindt Premium                    | 15   |
-| 3  | Überraschungspaket                              | 20   |
-| 4  | Neues Buch                                      | 30   |
-| 5  | Kinogutscheine für 2                            | 40   |
-| 6  | Buchclub-Mitgliedschaft Jahresabo               | 60   |
-| 7  | Schönheitsbehandlung Körperpflege               | 75   |
-| 8  | Yoga-Kurs                                       | 85   |
-| 9  | Netflix-Jahresabo                               | 90   |
-| 10 | Alle Bände Tim & Struppi                        | 100  |
-| 11 | Sportausrüstung nach Wahl                       | 120  |
-| 12 | Kochkurs Migros Klubschule – Thema Sushi        | 140  |
-| 13 | Wellness-Tag mit Nadescha                       | 150  |
-| 14 | Abendessen im Sternerestaurant                  | 180  |
-| 15 | Ninja Cooker                                    | 200  |
-| 16 | Konzerttickets nach Wahl                        | 250  |
-| 17 | Neues Magic Commander-Deck                      | 300  |
+| 1  | Puzzle mit unserem Hochzeitsfoto                | 30   |
+| 2  | Individuelle Hülle für AirPods                 | 50   |
+| 3  | Sandwich-Maker                                  | 60   |
+| 4  | Brunch mit Nadescha                             | 70   |
+| 5  | Gutschein für Wolle und Häkelmaterial           | 80   |
+| 6  | Alle Bände Tim & Struppi                        | 100  |
+| 7  | Silberkette                                    | 120  |
+| 8  | Yoga-Abo für das Yoga-Studio nebenan            | 120  |
+| 9  | Ohrringe                                       | 150  |
+| 10 | Wellness-Tag mit Nadescha                       | 150  |
+| 11 | Neuer Reiskocher (auf Empfehlung von Joy)       | 180  |
+| 12 | Tolino E-Reader                                 | 200  |
+| 13 | Ninja Cooker                                    | 200  |
+| 14 | Konzerttickets nach Wahl                        | 250  |
+| 15 | Eventküche mit Kolleginnen                       | 300  |
+| 16 | Shopping-Tag mit Budget                          | 300  |
+| 17 | Neues Magic Commander-Deck                       | 300  |
 | 18 | Neues iPad                                      | 400  |
-| 19 | 1 Tag Europapark Rust mit Kolleginnen inkl. Eintritt | 500 |
-| 20 | SPA Wochenende im Tessin                        | 700  |
+| 19 | Professionelles Fotoshooting zu dritt oder Schwangerschaftsshooting | 500 |
+| 20 | 1 Tag Europapark Rust mit Kolleginnen inkl. Eintritt | 500 |
 | 21 | Städtereise nach Wien                           | 900  |
 | 22 | Städtereise nach Amsterdam                      | 1200 |
 | 23 | Wochenendausflug mit Nadescha inkl. Hotel und Flug | 1500 |
