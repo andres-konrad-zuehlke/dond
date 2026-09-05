@@ -11,29 +11,29 @@
  */
 
 const gifts = [
-  { id: 0,  title: 'Puzzle mit unserem Hochzeitsfoto',                                  value:   30 },
-  { id: 1,  title: 'Individuelle Hülle für AirPods',                                    value:   50 },
-  { id: 2,  title: 'Sandwich-Maker',                                                     value:   60 },
-  { id: 3,  title: 'Brunch mit Nadescha',                                                value:   70 },
-  { id: 4,  title: 'Gutschein für Wolle und Häkelmaterial',                              value:   80 },
-  { id: 5,  title: 'Alle Bände Tim & Struppi',                                           value:  100 },
-  { id: 6,  title: 'Silberkette',                                                       value:  120 },
-  { id: 7,  title: 'Yoga-Abo für das Yoga-Studio nebenan',                              value:  120 },
-  { id: 8,  title: 'Ohrringe',                                                          value:  150 },
-  { id: 9,  title: 'Wellness-Tag mit Nadescha',                                          value:  150 },
-  { id: 10, title: 'Neuer Reiskocher (auf Empfehlung von Joy)',                          value:  180 },
-  { id: 11, title: 'Tolino E-Reader',                                                    value:  200 },
-  { id: 12, title: 'Ninja Cooker',                                                       value:  200 },
-  { id: 13, title: 'Konzerttickets nach Wahl',                                          value:  250 },
-  { id: 14, title: 'Eventküche mit Kolleginnen',                                         value:  300 },
-  { id: 15, title: 'Shopping-Tag mit Budget',                                            value:  300 },
-  { id: 16, title: 'Neues Magic Commander-Deck',                                         value:  300 },
-  { id: 17, title: 'Neues iPad',                                                         value:  400 },
-  { id: 18, title: 'Professionelles Fotoshooting zu dritt oder Schwangerschaftsshooting', value: 500 },
-  { id: 19, title: '1 Tag Europapark Rust mit Kolleginnen inkl. Eintritt',                value: 500 },
-  { id: 20, title: 'Städtereise nach Wien',                                              value: 900 },
-  { id: 21, title: 'Städtereise nach Amsterdam',                                         value: 1200 },
-  { id: 22, title: 'Wochenendausflug mit Nadescha inkl. Hotel und Flug',                 value: 1500 },
+  { id: 0,  emoji: '🧩', title: 'Puzzle mit unserem Hochzeitsfoto',                                  value:   30 },
+  { id: 1,  emoji: '🎧', title: 'Individuelle Hülle für AirPods',                                    value:   50 },
+  { id: 2,  emoji: '🥪', title: 'Sandwich-Maker',                                                     value:   60 },
+  { id: 3,  emoji: '🥐', title: 'Brunch mit Nadescha',                                                value:   70 },
+  { id: 4,  emoji: '🧶', title: 'Gutschein für Wolle und Häkelmaterial',                              value:   80 },
+  { id: 5,  emoji: '📚', title: 'Alle Bände Tim & Struppi',                                           value:  100 },
+  { id: 6,  emoji: '📿', title: 'Silberkette',                                                       value:  120 },
+  { id: 7,  emoji: '🧘', title: 'Yoga-Abo für das Yoga-Studio nebenan',                              value:  120 },
+  { id: 8,  emoji: '💎', title: 'Ohrringe',                                                          value:  150 },
+  { id: 9,  emoji: '💆', title: 'Wellness-Tag mit Nadescha',                                          value:  150 },
+  { id: 10, emoji: '🍚', title: 'Neuer Reiskocher (auf Empfehlung von Joy)',                          value:  180 },
+  { id: 11, emoji: '📖', title: 'Tolino E-Reader',                                                    value:  200 },
+  { id: 12, emoji: '🍲', title: 'Ninja Cooker',                                                       value:  200 },
+  { id: 13, emoji: '🎟️', title: 'Konzerttickets nach Wahl',                                          value:  250 },
+  { id: 14, emoji: '👩‍🍳', title: 'Eventküche mit Kolleginnen',                                         value:  300 },
+  { id: 15, emoji: '🛍️', title: 'Shopping-Tag mit Budget',                                            value:  300 },
+  { id: 16, emoji: '🃏', title: 'Neues Magic Commander-Deck',                                         value:  300 },
+  { id: 17, emoji: '📱', title: 'Neues iPad',                                                         value:  400 },
+  { id: 18, emoji: '📸', title: 'Professionelles Fotoshooting zu dritt oder Schwangerschaftsshooting', value: 500 },
+  { id: 19, emoji: '🎢', title: '1 Tag Europapark Rust mit Kolleginnen inkl. Eintritt',                value: 500 },
+  { id: 20, emoji: '🏛️', title: 'Städtereise nach Wien',                                              value: 900 },
+  { id: 21, emoji: '🚲', title: 'Städtereise nach Amsterdam',                                         value: 1200 },
+  { id: 22, emoji: '✈️', title: 'Wochenendausflug mit Nadescha inkl. Hotel und Flug',                 value: 1500 },
 ];
 
 // ── Game state ──────────────────────────────────────────────────────────────
@@ -67,7 +67,7 @@ function createGiftButton(gift) {
   const btn = document.createElement('button');
   btn.className   = 'gift-button';
   btn.id          = `gift-${gift.id}`;
-  btn.innerHTML   = `<span class="btn-icon">🎁</span>${escapeHtml(gift.title)}`;
+  btn.innerHTML   = `<span class="btn-icon">${escapeHtml(gift.emoji)}</span>${escapeHtml(gift.title)}`;
   btn.addEventListener('click', () => openGift(gift.id));
   return btn;
 }
