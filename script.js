@@ -21,7 +21,7 @@ const gifts = [
   { id: 7,  emoji: '🎄', title: 'Selbstgemachter Adventskalender',                                    value:   160 },
   { id: 8, emoji: '🍚', title: 'Neuer Reiskocher (auf Empfehlung von Joy)',                          value:  180 },
   { id: 9,  emoji: '📿', title: 'Neue Silberkette',                                                   value:  200 },
-  { id: 10, emoji: '📖', title: 'Neuer Tolino E-Reader',                                              value:  220 },
+  { id: 10, emoji: '📖', title: 'Neuer E-Reader',                                              value:  220 },
   { id: 11, emoji: '🍲', title: 'Ninja Cooker',                                                       value:  240 },
   { id: 12, emoji: '🎟️', title: 'Konzerttickets nach Wahl',                                          value:  250 },
   { id: 13, emoji: '🃏', title: 'Neues Magic Commander-Deck',                                         value:  260 },
@@ -31,8 +31,8 @@ const gifts = [
   { id: 17, emoji: '📱', title: 'Neues iPad',                                                         value:  400 },
   { id: 18, emoji: '📸', title: 'Professionelles Fotoshooting zu dritt oder Schwangerschaftsshooting', value: 500 },
   { id: 19, emoji: '🎢', title: '1 Tag Europapark Rust mit Nadescha inkl. Fahrt & Eintritt',           value: 510 },
-  { id: 20, emoji: '🚲', title: 'Sushi-Kurs bei Yuki mit Kolleginnen',                                         value: 520 },
-  { id: 21, emoji: '🏛️', title: 'Städtereise mit Nadescha nach Konstanz inkl. Hotel',                value: 900 },
+  { id: 20, emoji: '🍣', title: 'Sushi-Kurs bei Yuki mit Kolleginnen',                                         value: 520 },
+  { id: 21, emoji: '🇩🇪', title: 'Städtereise mit Nadescha nach Konstanz inkl. Hotel',                value: 900 },
   { id: 22, emoji: '✈️', title: 'Reise nach Amsterdam mit Nadescha inkl. Hotel und Flug',                 value: 1500 },
 ];
 
